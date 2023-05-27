@@ -1,62 +1,77 @@
-// Define the employee objects
+var idgen = (function(){var id=1000;return function(){if(arguments[0]===0)id=0;return id++;}})();
 const employees = [
     {
-      id: generateEmployeeId(),
+      id: idgen(),
       fullName: "Ghazi Samer",
       department: "Administration",
       level: "Senior",
       imageUrl: "https://thumbs.dreamstime.com/b/man-handsome-mature-employee-wear-formal-suit-business-career-concept-man-handsome-mature-employee-wear-formal-suit-business-193163038.jpg",
+      generateEmployeeId: function() {
+        return idgen();
+      },
     },
     {
-      id: generateEmployeeId(),
+      id: idgen(),
       fullName: "Lana Ali",
       department: "Finance",
       level: "Senior",
       imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReOx5_EINdfM9xQxjABxzPBjoIPDpgcR5dteiWXP1Kqk6RZ5dGKGCgXn-XThL0gLVYzyo&usqp=CAU.jpg",
+      generateEmployeeId: function() {
+        return idgen();
+      },
     },
     {
-      id: generateEmployeeId(),
+      id: idgen(),
       fullName: "Tamara Ayoub",
       department: "Marketing",
       level: "Senior",
       imageUrl: "https://img.freepik.com/premium-photo/happy-female-office-employee-formal-white-shirt-expressing-confidence-standing-with-arms-crossed-while-thinking-about-work-day-isolated-light-wall-confident-business-woman-posing-studio_95891-4559.jpg",
+      generateEmployeeId: function() {
+        return idgen();
+      },
     },
     {
-      id: generateEmployeeId(),
+      id: idgen(),
       fullName: "Safi Walid",
       department: "Administration",
       level: "Mid-Senior",
       imageUrl: "https://img.freepik.com/premium-photo/mature-employee-business-suit-white-background_474717-70122.jpg",
+      generateEmployeeId: function() {
+        return idgen();
+      },
     },
     {
-      id: generateEmployeeId(),
+      id: idgen(),
       fullName: "Omar Zaid",
       department: "Development",
       level: "Senior",
       imageUrl: "https://thumbs.dreamstime.com/b/handsome-confident-businessman-standing-his-hands-pockets-42538103.jpg",
+      generateEmployeeId: function() {
+        return idgen();
+      },
     },
     {
-      id: generateEmployeeId(),
+      id: idgen(),
       fullName: "Rana Saleh",
       department: "Development",
       level: "Junior",
       imageUrl: "https://www.shutterstock.com/image-photo/young-asian-business-woman-smiling-260nw-2160057221.jpg",
+      generateEmployeeId: function() {
+        return idgen();
+      },
     },
     {
-      id: generateEmployeeId(),
+      id: idgen(),
       fullName: "Hadi Ahmad",
       department: "Finance",
       level: "Mid-Senior",
       imageUrl: "https://www.shutterstock.com/image-photo/smiling-young-business-man-wearing-260nw-285687404.jpg",
+      generateEmployeeId: function() {
+        return idgen();
+      },
     },
   ];
   
-  // Generate a unique four-digit employee ID
-  function generateEmployeeId() {
-    return Math.floor(Math.random() * 9000) + 1000;
-  }
-  
-  // Calculate the salary based on employee level
   function calculateSalary(level) {
     let min, max;
     switch (level) {
@@ -81,7 +96,7 @@ const employees = [
     return { randomSalary, netSalary };
   }
   
-  // Render employee information on the home page
+  
   function renderEmployees() {
     const output = document.getElementById("output");
     employees.forEach((employee) => {
@@ -93,6 +108,6 @@ const employees = [
 
   }
 
-  // Call the renderEmployees function when the page is loaded
+  
   window.addEventListener("DOMContentLoaded", renderEmployees);
   
