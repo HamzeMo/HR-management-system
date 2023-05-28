@@ -48,7 +48,6 @@ Employees.prototype.calculateSalary = function () {
  
   Employees.prototype.render = function () {
     document.write(
-      " <p> Employees id: " + this.id + " </p>"    + 
       " <p> Employees name: " + this.fullName + " </p>"    + 
       " <p>Department: " + this.department  + "</p>" + 
       "<p> Employees salary: " + this.salary.randomSalary) + "</p>"  }
