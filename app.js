@@ -1,3 +1,4 @@
+
 function Employees(name, departments, levels, image) {
 
     this.employeeId = EmployeesID();
@@ -57,7 +58,6 @@ divE.style.fontSize = "15px";
 divE.style.margin= "40px"
 divE.style.display= "inline-block";
 divE.style.flexWrap= "wrap";
-
 }
 
 let Ghazi = new Employees("Ghazi Samer","Administration","Senior","./assets/Ghazi.jpg");
@@ -75,3 +75,4 @@ console.log(Safi);
 console.log(Omar);
 console.log(Rana);
 console.log(Hadi);
+
