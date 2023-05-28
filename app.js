@@ -1,7 +1,7 @@
-var idgen = (function(){var id=1000;return function(){if(arguments[0]===0)id=0;return id++;}})();
+
 const employees = [
     {
-      id: idgen(),
+      
       fullName: "Ghazi Samer",
       department: "Administration",
       level: "Senior",
@@ -11,7 +11,7 @@ const employees = [
       },
     },
     {
-      id: idgen(),
+     
       fullName: "Lana Ali",
       department: "Finance",
       level: "Senior",
@@ -21,7 +21,7 @@ const employees = [
       },
     },
     {
-      id: idgen(),
+      
       fullName: "Tamara Ayoub",
       department: "Marketing",
       level: "Senior",
@@ -31,7 +31,7 @@ const employees = [
       },
     },
     {
-      id: idgen(),
+   
       fullName: "Safi Walid",
       department: "Administration",
       level: "Mid-Senior",
@@ -41,7 +41,7 @@ const employees = [
       },
     },
     {
-      id: idgen(),
+     
       fullName: "Omar Zaid",
       department: "Development",
       level: "Senior",
@@ -51,7 +51,7 @@ const employees = [
       },
     },
     {
-      id: idgen(),
+      
       fullName: "Rana Saleh",
       department: "Development",
       level: "Junior",
@@ -61,7 +61,7 @@ const employees = [
       },
     },
     {
-      id: idgen(),
+      
       fullName: "Hadi Ahmad",
       department: "Finance",
       level: "Mid-Senior",
@@ -71,6 +71,20 @@ const employees = [
       },
     },
   ];
+  function EmployeeID(ids) {
+    let minID = 1000; 
+    let maxID = 1006; 
+    let newID = Math.floor(Math.random() * (maxID - minID + 1)) + minID;
+  
+    while (ids.includes(newID)) {
+      newID = Math.floor(Math.random() * (maxID - minID + 1)) + minID;
+    }
+  
+    return newID;
+  }
+  
+  let ids = [];
+
   
   function calculateSalary(level) {
     let min, max;
